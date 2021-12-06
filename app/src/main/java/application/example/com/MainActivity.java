@@ -14,49 +14,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 1 button start
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        // button_narzedzia start
+        Button button_narzedzia = findViewById(R.id.button_narzedzia);
+        button_narzedzia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                Intent intent = new Intent(MainActivity.this, narzedzia.class);
                 startActivity(intent);
             }
         });
-        // 1 button end
+        // button_narzedzia end
 
-        // 2 button start
-        Button button2 = findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
+        // button_graj start
+        Button button_graj = findViewById(R.id.button_graj);
+        button_graj.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity3.class);
+                Intent intent = new Intent(MainActivity.this, graj.class);
                 startActivity(intent);
             }
         });
-        // 2 button end
+        // button_graj end
 
-        // 3 button start
-        Button button3 = findViewById(R.id.button3);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity4.class);
-                startActivity(intent);
-            }
-        });
-        // 3 button end
-
-        // 4 button start
-        Button button4 = findViewById(R.id.button4);
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity5.class);
-                startActivity(intent);
-            }
-        });
-        // 3 button end
     }
 
 }
