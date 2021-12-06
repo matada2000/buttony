@@ -58,5 +58,17 @@ public class narzedzia extends AppCompatActivity {
             }
         });
         // 4button end
+
+        // 5 button_powrot start
+        Button button_powrot = findViewById(R.id.button_powrot);
+        button_powrot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(narzedzia.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        // 5 button_powrot end
+
     }
 }

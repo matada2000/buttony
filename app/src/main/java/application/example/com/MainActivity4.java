@@ -2,11 +2,14 @@ package application.example.com;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity4 extends AppCompatActivity {
@@ -27,6 +30,17 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
+        // 5 button_powrot start
+        Button button_powrot = findViewById(R.id.button_powrot);
+        button_powrot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity4.this, narzedzia.class);
+                startActivity(intent);
+            }
+        });
+        // 5 button_powrot end
 
         imageView = findViewById(R.id.imageView);
 

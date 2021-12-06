@@ -1,5 +1,6 @@
 package application.example.com;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -8,6 +9,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity5 extends AppCompatActivity {
@@ -22,6 +24,17 @@ public class MainActivity5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main5);
+
+        // 5 button_powrot start
+        Button button_powrot = findViewById(R.id.button_powrot);
+        button_powrot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity5.this, narzedzia.class);
+                startActivity(intent);
+            }
+        });
+        // 5 button_powrot end
 
         root = findViewById(R.id.root);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);

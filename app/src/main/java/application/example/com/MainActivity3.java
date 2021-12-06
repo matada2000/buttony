@@ -8,8 +8,10 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
@@ -24,6 +26,17 @@ public class MainActivity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        // 5 button_powrot start
+        Button button_powrot = findViewById(R.id.button_powrot);
+        button_powrot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity3.this, narzedzia.class);
+                startActivity(intent);
+            }
+        });
+        // 5 button_powrot end
 
         seekBar = findViewById(R.id.seekBar);//
         contentResolver = getContentResolver();//
